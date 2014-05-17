@@ -13,4 +13,8 @@
 class ServiceUsage < ActiveRecord::Base
   belongs_to :service_cost
   belongs_to :usage_profile
+
+  def benefit_for(plan)
+    PlanBenefit.where(plan_id: plan.id, service_cost_id: service_cost.id).first
+  end
 end
