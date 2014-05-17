@@ -1,0 +1,22 @@
+common: &base
+  adapter: 'mysql2'
+  username: root
+  #password: 123456
+  #host: localhost
+  #port: 3306
+  #socket: /tmp/mysql.sock
+  #socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *base
+  database: help_me_choose_development
+
+test:
+  <<: *base
+  encoding: utf8
+  database: help_me_choose_test
+
+
+
+
+
