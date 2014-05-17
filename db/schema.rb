@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517194301) do
+ActiveRecord::Schema.define(version: 20140517204826) do
 
   create_table "plan_benefits", force: true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140517194301) do
     t.integer  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order",                  default: 0
   end
 
   add_index "service_costs", ["name"], name: "index_service_costs_on_name", using: :btree
