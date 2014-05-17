@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517194301) do
+ActiveRecord::Schema.define(version: 20140517213241) do
 
   create_table "plan_benefits", force: true do |t|
     t.string   "name"
-    t.integer  "coinsurance",     default: 0
+    t.boolean  "coinsurance",     default: false
     t.integer  "copay",           default: 0
     t.integer  "plan_id"
     t.integer  "service_cost_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140517194301) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "coinsurance"
+    t.string   "code"
   end
 
   create_table "service_costs", force: true do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140517194301) do
     t.integer  "cost"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "order",                  default: 0
   end
 
   add_index "service_costs", ["name"], name: "index_service_costs_on_name", using: :btree

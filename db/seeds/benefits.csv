@@ -1,0 +1,21 @@
+plan,benefit,copay,coinsurance
+PPO80,Wellness Visits,0,N
+PPO80,Cardio Stress Test,20,Y
+PPO80,Mammogram's,20,Y
+PPO80,Colonoscopy,20,Y
+PPO80,Dermatologist,20,Y
+PPO80,Physical Therapy,20,Y
+PPO80,Lab/Blood Tests,20,Y
+PPO80,MRI's,20,Y
+PPO80,Rx. Generic,20,N
+PPO80,Rx. Specialty,40,N
+HD6000,Wellness Visits,0,N
+HD6000,Cardio Stress Test,0,Y
+HD6000,Mammogram's,0,Y
+HD6000,Colonoscopy,0,Y
+HD6000,Dermatologist,0,Y
+HD6000,Physical Therapy,0,Y
+HD6000,Lab/Blood Tests,0,Y
+HD6000,MRI's,0,Y
+HD6000,Rx. Generic,0,N
+HD6000,Rx. Specialty,0,N
