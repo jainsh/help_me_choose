@@ -5,10 +5,8 @@
       %tr
         %th Service
         %th Typical Cost
-      %tr
-        %td Wellness Visits
-        %td $185
-      %tr
-        %td MRI(s)
-        %td $800
-    =link_to "Next", new_service_usage_path, :class => "button btn btn-success"
+      - @service_costs.each do |service|
+        %tr
+          %td=service.name
+          %td=number_to_currency(service.cost)
+    =link_to "Next", new_service_usage_path, :class => "button btn btn-success pull-right"
