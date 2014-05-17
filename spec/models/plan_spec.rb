@@ -10,6 +10,7 @@
 #  created_at        :datetime
 #  updated_at        :datetime
 #  coinsurance       :integer
+#  code              :string(255)
 #
 
 require 'spec_helper'

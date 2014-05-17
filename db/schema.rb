@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517211219) do
+ActiveRecord::Schema.define(version: 20140517213241) do
 
   create_table "plan_benefits", force: true do |t|
     t.string   "name"
-    t.integer  "coinsurance",     default: 0
+    t.boolean  "coinsurance",     default: false
     t.integer  "copay",           default: 0
     t.integer  "plan_id"
     t.integer  "service_cost_id"

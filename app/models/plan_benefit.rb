@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  name            :string(255)
-#  coinsurance     :integer          default(0)
+#  coinsurance     :boolean          default(FALSE)
 #  copay           :integer          default(0)
 #  plan_id         :integer
 #  service_cost_id :integer
