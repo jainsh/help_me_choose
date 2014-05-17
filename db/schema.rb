@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517213241) do
+ActiveRecord::Schema.define(version: 20140517220333) do
 
   create_table "plan_benefits", force: true do |t|
-    t.string   "name"
     t.boolean  "coinsurance",     default: false
     t.integer  "copay",           default: 0
     t.integer  "plan_id"
