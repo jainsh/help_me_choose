@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517181610) do
+ActiveRecord::Schema.define(version: 20140517194301) do
 
   create_table "plan_benefits", force: true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140517181610) do
     t.integer  "max_oop"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "coinsurance"
   end
 
   create_table "service_costs", force: true do |t|
