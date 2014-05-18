@@ -19,3 +19,13 @@ HD6000,Lab/Blood Tests,0,Y
 HD6000,MRI,0,Y
 HD6000,Rx. Generic,0,N
 HD6000,Rx. Specialty,0,N
+PPO70,Wellness Visits,0,N
+PPO70,Cardio Stress Test,20,Y
+PPO70,Mammogram,20,Y
+PPO70,Colonoscopy,20,Y
+PPO70,Dermatologist,20,Y
+PPO70,Physical Therapy,20,Y
+PPO70,Lab/Blood Tests,20,Y
+PPO70,MRI,20,Y
+PPO70,Rx. Generic,20,N
+PPO70,Rx. Specialty,40,N

@@ -1,6 +1,15 @@
 puts "Loading Plans ..."
 
 plan_attributes = [
+  # PPO 70
+  {
+    code: "PPO70",
+    name: "PPO 70",
+    monthly_premium: "350",
+    annual_deductible: "3000",
+    max_oop: "5500",
+    coinsurance: "70",
+  },
   # PPO 80
   {
     code: "PPO80",
