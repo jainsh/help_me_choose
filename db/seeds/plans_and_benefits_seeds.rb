@@ -29,7 +29,8 @@ plan_attributes = [
     coinsurance: "100",
   },
 ]
-plan_attributes.each do |pattribs|
+plan_attributes.each_with_index do |pattribs, sort_order|
+  pattribs[:sort_order] = sort_order
   plan = Plan.find_by_code(pattribs[:code])
   if plan.present?
     plan.update_attributes!(pattribs)

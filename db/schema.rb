@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518025648) do
+ActiveRecord::Schema.define(version: 20140518035847) do
 
   create_table "plan_benefits", force: true do |t|
     t.boolean  "coinsurance",     default: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140518025648) do
     t.datetime "updated_at"
     t.integer  "coinsurance"
     t.string   "code"
+    t.integer  "sort_order",                    default: 0
   end
 
   create_table "service_costs", force: true do |t|

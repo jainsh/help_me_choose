@@ -16,6 +16,8 @@
 class Plan < ActiveRecord::Base
   has_many :plan_benefits
 
+  default_scope { order('sort_order ASC') }
+
   def annual_premium
     Calculator.calculate_annual_premium(self)
   end
