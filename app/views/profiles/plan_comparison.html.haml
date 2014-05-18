@@ -4,5 +4,14 @@
   = javascript_include_tag 'highcharts'
   = javascript_include_tag 'themes/gray'
 
-%div{style: "margin-top: 50px"}
+%div.clear{style: "margin-top: 50px"}
   =link_to "< Edit Usage Profile", edit_usage_profile_path(@profile), :class => "button btn btn-success pull-left"
+
+
+.row{style: "margin-top: 100px"}
+  %h3 Description
+  .row.well
+    This page shows the expected out-of-pocket for personalized for their usage pattern.
+    %ul
+      %li= "<font color='#BC5959'>Annual Premium</font>  - is a fixed cost for their health coverage".html_safe
+      %li=  "<font color='#94B8FF'>Service / Care</font>  - is the typical cost they are expected to pay for all the service they plan to use. This is calculated based on Annual Deductible, Maximum Out-of-pocket, copay and co-insurance that their plan offers.".html_safe
