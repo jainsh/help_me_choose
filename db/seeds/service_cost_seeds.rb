@@ -3,12 +3,12 @@ puts "Loading ServiceCost(s)..."
 services_data = [
   ["Wellness Visits", "185"],
   ["Cardio Stress Test", "1300"],
-  ["Mammogram's", "330"],
+  ["Mammogram", "330"],
   ["Colonoscopy", "1000"],
   ["Dermatologist", "210"],
   ["Physical Therapy", "1000"],
   ["Lab/Blood Tests", "77"],
-  ["MRI's", "800"],
+  ["MRI", "800"],
   ["Rx. Generic", "10"],
   ["Rx. Specialty", "100"],
 ]
