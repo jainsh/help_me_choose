@@ -15,4 +15,5 @@
         .form-group
           = su.label su.object.service_cost.name
           = su.input_field :usage_count
+          = su.hidden_field :service_cost_id
       = f.submit "Next" , :class => "btn btn-success pull-right"

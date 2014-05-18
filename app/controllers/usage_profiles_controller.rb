@@ -18,7 +18,7 @@ class UsageProfilesController < ApplicationController
   private
 
   def usage_profile_params
-    params.require(:usage_profile).permit(:gender, :zipcode, :date_of_birth, service_usages_attributes: [ :usage_count ])
+    params.require(:usage_profile).permit(:gender, :zipcode, :date_of_birth, service_usages_attributes: [ :service_cost_id, :usage_count ])
   end
 
 end
