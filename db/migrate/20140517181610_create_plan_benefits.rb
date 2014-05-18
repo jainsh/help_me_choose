@@ -2,7 +2,7 @@ class CreatePlanBenefits < ActiveRecord::Migration
   def change
     create_table :plan_benefits do |t|
       t.string :name, Limit: 150
-      t.integer :coinsurance, default: 0
+      t.boolean :coinsurance, default: false
       t.integer :copay, default: 0
       t.integer :plan_id
       t.integer :service_cost_id
