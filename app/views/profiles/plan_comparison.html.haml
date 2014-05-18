@@ -3,3 +3,6 @@
 - content_for :head do
   = javascript_include_tag 'highcharts'
   = javascript_include_tag 'themes/gray'
+
+%div{style: "margin-top: 50px"}
+  =link_to "< Edit Usage Profile", edit_usage_profile_path(@profile), :class => "button btn btn-success pull-left"
