@@ -15,6 +15,12 @@ $ ->
 
     xAxis:
       categories: _(_(gon.plans).pluck('name')).compact()
+      labels:
+        formatter: ->
+          "<span class='plan-name'>" + @value + "</span><br/><b>Max OOP:</b> $" +
+          gon.max_oops[@value] +
+          "<br/><b>Deductible:</b> $" +
+          gon.deductibles[@value]
 
     yAxis:
       title:
