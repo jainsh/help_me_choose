@@ -14,7 +14,6 @@ class Calculator
                                            aggregate: aggregate)
       end
     end
-
     aggregate
   end
 
@@ -27,7 +26,6 @@ class Calculator
     aggregate = args[:aggregate]
 
     service = usage.service_cost
-
     moop = plan.max_oop
 
     return 0 if maximum_oop_met?(moop, aggregate)
@@ -44,7 +42,6 @@ class Calculator
       differential = evaluate_differential(moop, (aggregate + coinsurance_cost))
       copay_cost =  applicable_cost(differential, benefit.copay)
     end
-
     coinsurance_cost + copay_cost
   end
 
@@ -53,14 +50,14 @@ class Calculator
   end
 
   def self.applicable_cost(differential, charge)
-    differential > charge ? charge : (charge - differential)
+    differential <= charge ? differential : charge
   end
 
   def self.maximum_oop_met?(moop, aggregate)
-    moop <= aggregate
+    aggregate >= moop
   end
 
   def self.deductible_met?(deductible, aggregate)
-    deductible <= aggregate
+    aggregate >= deductible
   end
 end
