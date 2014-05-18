@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :service_usages, only: [:new]
   resources :usage_profiles
 
-  get 'profiles/:id/plan/:plan_id' => 'profiles#plan_usage', :as => :plan_usage
+  get 'profiles/:id/plan-comparison' => 'profiles#plan_comparison', :as => :plan_comparison
 
   # Example resource route with options:
   #   resources :products do

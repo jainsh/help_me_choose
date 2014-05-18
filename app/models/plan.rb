@@ -15,4 +15,8 @@
 
 class Plan < ActiveRecord::Base
   has_many :plan_benefits
+
+  def annual_premium
+    Calculator.calculate_annual_premium(self)
+  end
 end

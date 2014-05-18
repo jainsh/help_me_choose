@@ -18,4 +18,8 @@ class UsageProfile < ActiveRecord::Base
   accepts_nested_attributes_for :service_usages, :allow_destroy => true
 
   enum gender: [:male, :female] unless instance_methods.include? :gender
+
+  def cost_for_plan(plan)
+    Calculator.calculate_for_usage_profile(self, plan)
+  end
 end
