@@ -6,9 +6,9 @@
 
     = simple_form_for @usage_profile, defaults: { input_html: { class: "form-horizontal" } } do |f|
       .form-group
-        = f.input :gender, :input_html => { :class => "form-control" }
+        = f.select :gender, [ ["Male", "male"],["Female", "female"] ], :input_html => { :class => "form-control" }
       .form-group
-        = f.input :date_of_birth, :input_html => { :class => "form-control" }
+        = f.input :date_of_birth, :input_html => { :class => "form-control" }, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, order: [:month, :day, :year]
       .form-group
         = f.input :zipcode, :input_html => { :class => "form-control" }
       = f.simple_fields_for :service_usages do |su|
