@@ -20,24 +20,25 @@ $ ->
     yAxis:
       title:
         text: "Cost (in dollars)"
+      tickInterval: 500
 
     series: [
       {
         name: "Annual Premium"
         color: "#990000"
         data: [
-          1
-          0
-          4
+          1000
+          500
+          2000
         ]
       }
       {
         name: "Services / Care"
         color: "#2929A3"
         data: [
-          5
-          7
-          3
+          2500
+          4000
+          3500
         ]
       }
     ]
