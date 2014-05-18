@@ -5,6 +5,7 @@ class ProfilesController < ActionController::Base
     @plans = Plan.all
 
     gon.plans = Plan.all.to_a
+    gon.premiums = @plans.map(&:annual_premium)
     render layout: 'application'
   end
 end

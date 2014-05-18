@@ -28,15 +28,13 @@ $ ->
         data: [
           1100
           2200
+          3300
         ]
       }
       {
         name: "Annual Premium"
         color: "#BC5959"
-        data: [
-          4800
-          3600
-        ]
+        data: gon.premiums
       }
     ]
 
