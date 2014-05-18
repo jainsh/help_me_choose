@@ -6,6 +6,10 @@ $ ->
     title:
       text: "Plan Comparison"
 
+    plotOptions:
+      bar:
+        stacking: "normal"
+
     xAxis:
       categories: [
         "Aetna PPO / Coinsurance 80%"
