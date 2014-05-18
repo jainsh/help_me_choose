@@ -17,9 +17,9 @@ $ ->
       categories: _(_(gon.plans).pluck('name')).compact()
       labels:
         formatter: ->
-          "<span class='plan-name'>" + @value + "</span><br/><b>Max OOP:</b> $" +
+          "<span class='plan-name'>" + @value + "</span><br/><b>Max Out-of-Pocket:</b> $" +
           gon.max_oops[@value] +
-          "<br/><b>Deductible:</b> $" +
+          "<br/><b>Annual Deductible:</b> $" +
           gon.deductibles[@value]
 
     yAxis:
