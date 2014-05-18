@@ -15,5 +15,7 @@ class UsageProfile < ActiveRecord::Base
   belongs_to :user
   has_many :service_usages
 
+  accepts_nested_attributes_for :service_usages, :allow_destroy => true
+
   enum gender: [:male, :female] unless instance_methods.include? :gender
 end

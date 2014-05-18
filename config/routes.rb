@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :service_costs
   resources :service_usages, only: [:new]
+  resources :usage_profiles
 
   get 'profiles/:id/plan/:plan_id' => 'profiles#plan_usage', :as => :plan_usage
 
