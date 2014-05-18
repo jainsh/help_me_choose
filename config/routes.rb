@@ -15,8 +15,11 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
   resources :service_costs
   resources :service_usages, only: [:new]
+
+  get 'profiles/:id/plan/:plan_id' => 'profiles#plan_usage', :as => :plan_usage
 
   # Example resource route with options:
   #   resources :products do
