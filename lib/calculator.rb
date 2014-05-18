@@ -1,18 +1,10 @@
 class Calculator
 
-  def maximum_oop_met?(moop, aggregate)
-    moop <= aggregate
-  end
-
-  def deductible_met?(deductible, aggregate)
-    deductible <= aggregate
-  end
-
-  def calculate_annual_premium(plan)
+  def self.calculate_annual_premium(plan)
     plan.monthly_premium * 12
   end
 
-  def calculate_for_usage_profile(profile, plan)
+  def self.calculate_for_usage_profile(profile, plan)
     aggregate = 0
 
     profile.service_usages.each do |usage|
@@ -28,7 +20,7 @@ class Calculator
 
   private
 
-  def calculate_for_service(args)
+  def self.calculate_for_service(args)
     plan = args[:plan]
     usage = args[:usage]
     benefit = usage.benefit_for(plan)
@@ -56,11 +48,19 @@ class Calculator
     coinsurance_cost + copay_cost
   end
 
-  def evaluate_differential(maximum, aggregate)
+  def self.evaluate_differential(maximum, aggregate)
     maximum - aggregate
   end
 
-  def applicable_cost(differential, charge)
+  def self.applicable_cost(differential, charge)
     differential > charge ? charge : (charge - differential)
+  end
+
+  def self.maximum_oop_met?(moop, aggregate)
+    moop <= aggregate
+  end
+
+  def self.deductible_met?(deductible, aggregate)
+    deductible <= aggregate
   end
 end
