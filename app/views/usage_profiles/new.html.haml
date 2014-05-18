@@ -1,24 +1,23 @@
 %h1.text-center Build a Usage Profile...
-%p.text-center Enter in number of visits in past year for each category...
-
 = simple_form_for @usage_profile, html: { class: "form-horizontal" } do |f|
   .row
     .col-md-4
       .form-group
+        = f.label "Gender"
         = f.select :gender, [ ["Male", "male"],["Female", "female"] ], :html => { :class => "form-control" }
       .form-group
         = f.input :date_of_birth, :html => { :class => "form-control" }, as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12, order: [:month, :day, :year]
       .form-group
         = f.input :zipcode, :html => { :class => "form-control" }
-    .col-md-4
+    .col-md-8
       = f.simple_fields_for :service_usages do |su|
-        .form-group
+        .form-group.pull-left{:style => "width: 150px; margin-right: 100px"}
           = su.label su.object.service_cost.name, su.object.service_cost.name
           = su.input_field :usage_count
           = su.hidden_field :service_cost_id
-      = f.button :submit
-
-
+  .row
+    .col-md-10
+      = f.submit "Next", :class => "button btn btn-success pull-right"
 
 %h3 Description
 .row.well
