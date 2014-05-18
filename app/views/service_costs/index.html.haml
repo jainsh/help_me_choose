@@ -8,5 +8,5 @@
       - @service_costs.each do |service|
         %tr
           %td=service.name
-          %td=number_to_currency(service.cost)
+          %td.text-right=number_to_currency(service.cost)
     =link_to "Next", new_usage_profile_path, :class => "button btn btn-success pull-right"
