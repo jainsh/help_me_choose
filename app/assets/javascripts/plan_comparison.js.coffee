@@ -19,11 +19,12 @@ $ ->
 
     yAxis:
       title:
-        text: "Fruit eaten"
+        text: "Cost (in dollars)"
 
     series: [
       {
-        name: "Jane"
+        name: "Annual Premium"
+        color: "#990000"
         data: [
           1
           0
@@ -31,7 +32,8 @@ $ ->
         ]
       }
       {
-        name: "John"
+        name: "Services / Care"
+        color: "#2929A3"
         data: [
           5
           7
