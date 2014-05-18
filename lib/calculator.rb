@@ -28,7 +28,7 @@ class Calculator
 
     service = usage.service_cost
 
-    moop = plan.maxiumum_oop
+    moop = plan.maximum_oop
 
     return 0 if maximum_oop_met?(moop, aggregate)
 

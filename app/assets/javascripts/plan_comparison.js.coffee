@@ -25,11 +25,7 @@ $ ->
       {
         name: "Services / Care"
         color: "#94B8FF"
-        data: [
-          1100
-          2200
-          3300
-        ]
+        data: gon.cost_totals
       }
       {
         name: "Annual Premium"
