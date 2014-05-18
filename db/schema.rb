@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140517220333) do
+ActiveRecord::Schema.define(version: 20140518013913) do
 
   create_table "plan_benefits", force: true do |t|
     t.boolean  "coinsurance",     default: false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140517220333) do
   add_index "service_costs", ["name"], name: "index_service_costs_on_name", using: :btree
 
   create_table "service_usages", force: true do |t|
-    t.integer  "usage_count",      default: 1
+    t.integer  "usage_count"
     t.integer  "service_cost_id"
     t.integer  "usage_profile_id"
     t.datetime "created_at"
