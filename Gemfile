@@ -46,6 +46,8 @@ gem "cancan"
 gem "haml-rails"
 gem "simple_form", git: "https://github.com/plataformatec/simple_form"
 gem "uuidtools"
+gem "gon"
+
 group :development do
   gem "rspec-rails"
   gem "guard-rspec"

@@ -76,6 +76,9 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.3)
     formatador (0.2.4)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -220,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   factory_girl_rails
+  gon
   guard-rspec
   haml-rails
   jbuilder (~> 2.0)
