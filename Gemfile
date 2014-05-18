@@ -53,6 +53,7 @@ gem "underscore-rails"
 group :development do
   gem "rspec-rails"
   gem "guard-rspec"
+  gem 'xray-rails'
 end
 
 group :test do
