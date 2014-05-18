@@ -4,9 +4,18 @@
     %table.table.table-striped.table-bordered
       %tr
         %th Service
-        %th Typical Cost
+        %th.text-right Typical Cost
       - @service_costs.each do |service|
         %tr
           %td=service.name
           %td.text-right=number_to_currency(service.cost)
     =link_to "Next", new_usage_profile_path, :class => "button btn btn-success pull-right"
+
+
+%h3 Description
+.row.well
+  Typical Cost represents the actual reasonable amount a provider charges a customer in a region. Information such as this is becoming increasingly available thanks to services such as:
+  %ul
+    %li= link_to "ClearHealthCosts.com", "http://clearhealthcosts.com/"
+    %li= link_to "Leslie's List", "http://leslieslist.org/"
+    %li= link_to "Castlight Health", "http://www.castlighthealth.com/"
