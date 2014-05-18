@@ -10,6 +10,9 @@ $ ->
       bar:
         stacking: "normal"
 
+    legend:
+      reversed: true
+
     xAxis:
       categories: [
         "Aetna PPO / Coinsurance 80%"
@@ -24,21 +27,21 @@ $ ->
 
     series: [
       {
-        name: "Annual Premium"
-        color: "#990000"
+        name: "Services / Care"
+        color: "#94B8FF"
         data: [
-          1000
-          500
-          2000
+          1100
+          2200
+          3000
         ]
       }
       {
-        name: "Services / Care"
-        color: "#2929A3"
+        name: "Annual Premium"
+        color: "#BC5959"
         data: [
-          2500
-          4000
-          3500
+          4800
+          3600
+          2400
         ]
       }
     ]
