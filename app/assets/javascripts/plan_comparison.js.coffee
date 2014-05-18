@@ -14,11 +14,7 @@ $ ->
       reversed: true
 
     xAxis:
-      categories: [
-        "Aetna PPO / Coinsurance 80%"
-        "Aetna PPO / Coinsurance 70%"
-        "Aetna 5000 High Deductible w/HSA"
-      ]
+      categories: _(_(gon.plans).pluck('name')).compact()
 
     yAxis:
       title:
@@ -32,7 +28,6 @@ $ ->
         data: [
           1100
           2200
-          3000
         ]
       }
       {
@@ -41,7 +36,6 @@ $ ->
         data: [
           4800
           3600
-          2400
         ]
       }
     ]

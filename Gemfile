@@ -48,6 +48,7 @@ gem "haml-rails"
 gem "simple_form", git: "https://github.com/plataformatec/simple_form"
 gem "uuidtools"
 gem "gon"
+gem "underscore-rails"
 
 group :development do
   gem "rspec-rails"
