@@ -15,6 +15,6 @@ class ServiceCost < ActiveRecord::Base
   has_many :plan_benefits
   has_many :service_usages
 
-  default_scope { order('order ASC') }
+  default_scope { order('service_costs.order ASC') }
 
 end
