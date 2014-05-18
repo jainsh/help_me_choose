@@ -9,7 +9,7 @@ class UsageProfilesController < ApplicationController
   def create
     @usage_profile = UsageProfile.new(usage_profile_params)
     if @usage_profile.save
-      redirect_to service_costs_path
+      redirect_to plan_comparison_path(@usage_profile)
     else
       render :new
     end
