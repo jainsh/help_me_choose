@@ -28,13 +28,13 @@ class Calculator
 
     service = usage.service_cost
 
-    moop = plan.maximum_oop
+    moop = plan.max_oop
 
     return 0 if maximum_oop_met?(moop, aggregate)
 
     coinsurance_cost = 0
     if benefit.coinsurance? and not deductible_met?(plan.annual_deductible, aggregate)
-      differential = evaluate_differential(deductible, aggregate)
+      differential = evaluate_differential(plan.annual_deductible, aggregate)
       assessible_cost = ((usage.usage_count * service.cost * plan.coinsurance).to_f / 100.to_f ).floor
       coinsurance_cost =  applicable_cost(differential, assessible_cost)
     end
