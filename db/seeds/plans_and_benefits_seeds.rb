@@ -1,15 +1,6 @@
 puts "Loading Plans ..."
 
 plan_attributes = [
-  # PPO 70
-  {
-    code: "PPO70",
-    name: "PPO 70",
-    monthly_premium: "350",
-    annual_deductible: "3000",
-    max_oop: "5500",
-    coinsurance: "70",
-  },
   # PPO 80
   {
     code: "PPO80",
@@ -18,6 +9,15 @@ plan_attributes = [
     annual_deductible: "2500",
     max_oop: "4500",
     coinsurance: "80",
+  },
+  # PPO Narrow Network
+  {
+    code: "PPONARROW",
+    name: "Narrow Network PPO",
+    monthly_premium: "350",
+    annual_deductible: "3000",
+    max_oop: "5500",
+    coinsurance: "90",
   },
   # PPO 80
   {
@@ -29,6 +29,8 @@ plan_attributes = [
     coinsurance: "100",
   },
 ]
+
+plan_ids = []
 plan_attributes.each_with_index do |pattribs, sort_order|
   pattribs[:sort_order] = sort_order
   plan = Plan.find_by_code(pattribs[:code])
@@ -38,7 +40,12 @@ plan_attributes.each_with_index do |pattribs, sort_order|
     plan = Plan.new(pattribs)
     plan.save!
   end
+  plan_ids << plan.id
 end
+
+# delete the older ones
+Plan.where("id not in (?)", plan_ids).destroy_all
+
 
 puts "Loading Plan Benefits ..."
 benefits_csv = "db/seeds/benefits.csv"

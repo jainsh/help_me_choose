@@ -14,7 +14,7 @@
 #
 
 class Plan < ActiveRecord::Base
-  has_many :plan_benefits
+  has_many :plan_benefits, :dependent => :destroy
 
   default_scope { order('sort_order ASC') }
 
